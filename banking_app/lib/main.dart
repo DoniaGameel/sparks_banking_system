@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           brightness: Brightness.light,
         ),
-        home: const ViewCutomers(),
+        home: const Home(),
         routes: {
           ViewCutomers.routeName: (ctx) => const ViewCutomers(),
           ViewTransactions.routeName: (ctx) => const ViewTransactions(),
