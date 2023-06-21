@@ -1,5 +1,4 @@
 import 'package:banking_app/views/screens/home.dart';
-import 'package:banking_app/views/screens/transfer_form.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -32,6 +31,7 @@ class MyApp extends StatelessWidget {
             42,
             108,
           ),
+          secondaryHeaderColor: const Color.fromARGB(255, 19, 75, 179),
           fontFamily: 'OpenSans',
           colorScheme: ColorScheme.fromSeed(
             seedColor: const Color.fromARGB(
@@ -47,7 +47,6 @@ class MyApp extends StatelessWidget {
         home: const Home(),
         routes: {
           ViewCutomers.routeName: (ctx) => const ViewCutomers(),
-          TransferForm.routeName: (ctx) => const TransferForm(),
         },
       ),
     );

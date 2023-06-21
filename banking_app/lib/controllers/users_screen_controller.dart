@@ -18,4 +18,15 @@ class UserViewController with ChangeNotifier {
 
     return userData;
   }
+
+  void transfer(String sender, String reciever, int amount) {
+    for (int i = 0; i < usersData.length; i++) {
+      if (usersData[i].name == sender) {
+        usersData[i].balance -= amount;
+      }
+      if (usersData[i].name == reciever) {
+        usersData[i].balance += amount;
+      }
+    }
+  }
 }

@@ -1,7 +1,7 @@
 class User {
   final String name;
   final String email;
-  final int balance;
+  int balance;
   final String gender;
   User({
     required this.name,

@@ -1,3 +1,4 @@
+import 'package:banking_app/views/screens/transfer_form.dart';
 import 'package:flutter/material.dart';
 
 class UserDetails extends StatelessWidget {
@@ -16,7 +17,25 @@ class UserDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: null,
+      appBar: AppBar(
+        centerTitle: true,
+        leading: IconButton(
+          color: Colors.white,
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.arrow_back),
+        ),
+        backgroundColor: Theme.of(context).primaryColor,
+        title: const Text(
+          "Sparks Bank",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -48,7 +67,16 @@ class UserDetails extends StatelessWidget {
               height: 20,
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => TransferForm(
+                      name: name,
+                    ),
+                  ),
+                );
+              },
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.resolveWith<Color?>(
                   (Set<MaterialState> states) {
