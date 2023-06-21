@@ -12,6 +12,7 @@ class UserViewController with ChangeNotifier {
         name: usersData[i].name,
         email: usersData[i].email,
         balance: usersData[i].balance,
+        gender: usersData[i].gender,
       ));
     }
 

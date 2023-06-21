@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 
+import '../screens/user_details.dart';
+
 class UserCard extends StatelessWidget {
   const UserCard({
     super.key,
     required this.balance,
     required this.name,
     required this.email,
+    required this.gender,
   });
   static const routeName = '/UserCard';
   final int balance;
   final String name;
   final String email;
+  final String gender;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -58,7 +62,19 @@ class UserCard extends StatelessWidget {
               ),
               const Spacer(),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => UserDetails(
+                        name: name,
+                        email: email,
+                        balance: balance,
+                        gender: gender,
+                      ),
+                    ),
+                  );
+                },
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.resolveWith<Color?>(
                     (Set<MaterialState> states) {

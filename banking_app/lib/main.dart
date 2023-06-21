@@ -1,10 +1,10 @@
 import 'package:banking_app/views/screens/home.dart';
+import 'package:banking_app/views/screens/transfer_form.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'controllers/users_screen_controller.dart';
 import 'views/screens/view_customers.dart';
-import 'views/screens/view_transactions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
         home: const Home(),
         routes: {
           ViewCutomers.routeName: (ctx) => const ViewCutomers(),
-          ViewTransactions.routeName: (ctx) => const ViewTransactions(),
+          TransferForm.routeName: (ctx) => const TransferForm(),
         },
       ),
     );
